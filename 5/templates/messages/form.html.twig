@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генерация сообщений</title>
+</head>
+<body>
+    <h1>Генерация сообщений</h1>
+    <form method="post" action="{{ path('messages') }}">
+        {% for index in 1..3 %}
+            <p>
+                <label>
+                    Имя
+                    <input type="text" name="name_{{ index }}">
+                </label>
+                <label>
+                    Email
+                    <input type="email" name="email_{{ index }}">
+                </label>
+            </p>
+        {% endfor %}
+        <button type="submit">Создать сообщения</button>
+    </form>
+</body>
+</html>

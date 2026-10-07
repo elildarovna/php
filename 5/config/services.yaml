@@ -1,0 +1,10 @@
+parameters:
+    app.return_address: 'admin@example.com'
+
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+
+    App\:
+        resource: '../src/'

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Отчёт</title>
+</head>
+<body>
+    <h1>Генерация завершена</h1>
+    <p>Сформировано сообщений: {{ result.count }}</p>
+    <ul>
+        {% for message in result.messages %}
+            <li>{{ message.name }} — <a href="mailto:{{ message.email }}">{{ message.email }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
