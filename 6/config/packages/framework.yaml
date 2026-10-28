@@ -1,0 +1,8 @@
+framework:
+    secret: '%env(APP_SECRET)%'
+    form: true
+    validation: { enable_attributes: true }
+    csrf_protection: true
+    session: true
+    php_errors:
+        log: true
