@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'contacts.label'|t }} — {{ 'site.name'|t }}{% endblock %}
+
+{% block content %}
+    <section class="wrap hero">
+        <span class="eyebrow">{{ 'contacts.label'|t }}</span>
+        <h1>{{ 'contacts.title'|t }}</h1>
+        <p class="lead">{{ 'contacts.lead'|t }}</p>
+    </section>
+    <section class="wrap section">
+        <h2>{{ 'contacts.section'|t }}</h2>
+        <div class="cards">
+            <article class="card"><h3>{{ 'contacts.item1.title'|t }}</h3><p>{{ 'contacts.item1.text'|t }}</p></article>
+            <article class="card"><h3>{{ 'contacts.item2.title'|t }}</h3><p>{{ 'contacts.item2.text'|t }}</p></article>
+            <article class="card"><h3>{{ 'contacts.item3.title'|t }}</h3><p>{{ 'contacts.item3.text'|t }}</p></article>
+        </div>
+        <p class="body-copy" style="margin-top:26px">{{ 'contacts.email.label'|t }}<br><span class="contact-email">{{ 'contacts.email'|t }}</span></p>
+        <p class="closing">{{ 'contacts.notice'|t }}</p>
+    </section>
+{% endblock %}

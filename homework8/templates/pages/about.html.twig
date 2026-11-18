@@ -1,0 +1,20 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'about.label'|t }} — {{ 'site.name'|t }}{% endblock %}
+
+{% block content %}
+    <section class="wrap hero">
+        <span class="eyebrow">{{ 'about.label'|t }}</span>
+        <h1>{{ 'about.title'|t }}</h1>
+        <p class="lead">{{ 'about.lead'|t }}</p>
+    </section>
+    <section class="wrap section">
+        <h2>{{ 'about.section'|t }}</h2>
+        <div class="cards">
+            <article class="card"><h3>{{ 'about.item1.title'|t }}</h3><p>{{ 'about.item1.text'|t }}</p></article>
+            <article class="card"><h3>{{ 'about.item2.title'|t }}</h3><p>{{ 'about.item2.text'|t }}</p></article>
+            <article class="card"><h3>{{ 'about.item3.title'|t }}</h3><p>{{ 'about.item3.text'|t }}</p></article>
+        </div>
+        <p class="closing">{{ 'about.end'|t }}</p>
+    </section>
+{% endblock %}

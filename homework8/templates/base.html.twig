@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="{{ 'site.lang'|t }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{{ 'site.description'|t }}">
+    <title>{% block title %}{{ 'site.name'|t }}{% endblock %}</title>
+    <style>
+        :root { --ink: #263a35; --muted: #66766f; --green: #416c5d; --pale: #edf3ec; --cream: #fbf9f3; --line: #e1e8e0; }
+        * { box-sizing: border-box; }
+        body { margin: 0; color: var(--ink); background: var(--cream); font: 16px/1.7 Arial, sans-serif; }
+        a { color: inherit; text-decoration: none; }
+        .wrap { width: min(100% - 40px, 1060px); margin: auto; }
+        header { border-bottom: 1px solid var(--line); background: rgba(251,249,243,.94); }
+        .nav { min-height: 74px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+        .brand { color: var(--green); font-family: Georgia, serif; font-size: 23px; font-weight: bold; }
+        .links { display: flex; gap: 25px; color: var(--muted); font-size: 14px; }
+        .links a:hover { color: var(--green); }
+        main { min-height: calc(100vh - 150px); }
+        .hero { padding: 80px 0 56px; }
+        .eyebrow { color: var(--green); font-size: 12px; font-weight: bold; letter-spacing: .12em; text-transform: uppercase; }
+        h1, h2, h3 { font-family: Georgia, 'Times New Roman', serif; font-weight: 400; line-height: 1.17; }
+        h1 { max-width: 760px; margin: 14px 0 18px; font-size: clamp(38px, 6vw, 62px); letter-spacing: -.035em; }
+        h2 { margin: 0 0 22px; font-size: clamp(29px, 4vw, 40px); }
+        h3 { margin: 0 0 9px; font-size: 22px; }
+        .lead { max-width: 730px; color: var(--muted); font-size: 18px; }
+        .button { display: inline-block; margin-top: 12px; padding: 12px 20px; border-radius: 7px; background: var(--green); color: white; font-weight: bold; }
+        .button:hover { background: #31584b; }
+        .section { padding: 35px 0 75px; }
+        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+        .card { padding: 23px; border: 1px solid var(--line); border-radius: 10px; background: white; }
+        .card p, .body-copy { margin: 0; color: var(--muted); }
+        .body-copy { max-width: 800px; margin-bottom: 22px; }
+        .closing { margin-top: 24px; padding: 20px 23px; border-left: 3px solid var(--green); background: var(--pale); }
+        .contact-email { display: inline-block; margin: 8px 0; color: var(--green); font-weight: bold; }
+        footer { padding: 21px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
+        @media (max-width: 700px) { .cards { grid-template-columns: 1fr; } .nav { align-items: flex-start; flex-direction: column; justify-content: center; padding: 15px 0; gap: 8px; } .links { flex-wrap: wrap; gap: 8px 18px; } .hero { padding-top: 54px; } }
+    </style>
+</head>
+<body>
+<header>
+    <nav class="wrap nav" aria-label="{{ 'nav.aria'|t }}">
+        <a class="brand" href="{{ path('home') }}">{{ 'site.name'|t }}</a>
+        <div class="links">
+            <a href="{{ path('home') }}">{{ 'nav.home'|t }}</a>
+            <a href="{{ path('about') }}">{{ 'nav.about'|t }}</a>
+            <a href="{{ path('contacts') }}">{{ 'nav.contacts'|t }}</a>
+        </div>
+    </nav>
+</header>
+<main>{% block content %}{% endblock %}</main>
+<footer><div class="wrap">{{ 'footer.note'|t }}</div></footer>
+</body>
+</html>
